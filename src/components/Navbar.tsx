@@ -22,7 +22,7 @@ function Navbar() {
     <div className="container">
       <div className="row">
         <div className="col">
-          <nav className="navbar navbar-expand-lg py-4">
+          <nav className="navbar navbar-expand-lg py-2 ">
             <div className="container-fluid">
               <div className="navbar-brand text-center" style={{cursor:"pointer"}} onClick={() => navigate("/")}>
                 <p className="category-name text-dark">
