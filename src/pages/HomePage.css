@@ -1,0 +1,36 @@
+.category-description {
+  color: white;
+  font-style: italic;
+}
+.category-name {
+  font-family: "Poppins", serif;
+  font-weight: 700;
+  font-style: normal;
+  color: white;
+  /* font-size: 52px; */
+}
+.div-onhover {
+  height: 92%;
+  width: 88%;
+  background: #000000;
+  opacity: 0;
+  transition: all 1ss;
+}
+.product-card:hover .div-onhover {
+  opacity: 0.9;
+}
+
+.add-cart {
+  font-weight: 900;
+}
+.carousel-item {
+  margin-right: 10px; /* Optional: Space between cards */
+  border-radius: 10px; /* Optional: Rounded corners for cards */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Shadow for cards */
+}
+.product-container {
+  overflow-x: scroll;
+}
+.product-container::-webkit-scrollbar {
+  display: none;
+}

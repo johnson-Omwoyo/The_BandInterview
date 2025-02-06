@@ -1,0 +1,191 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Men's T-shirt",
+      "price": 25,
+      "description": "A comfortable cotton T-shirt for everyday wear.",
+      "category": "Men's Clothes",
+      "image": "https://images.unsplash.com/photo-1555640315-060d473c618b?crop=entropy&cs=tinysrgb&fit=max&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDI5fHx0c2hpcnR8ZW58MHx8fHwxNjc1NzYyMjQ&ixlib=rb-1.2.1&q=80&w=1080",
+      "quantity": 50,
+      "rating": 4.5
+    },
+    {
+      "id": 2,
+      "name": "Men's Jeans",
+      "price": 40,
+      "description": "Classic fit jeans, perfect for casual outings.",
+      "category": "Men's Clothes",
+      "image": "https://images.unsplash.com/photo-1591619985974-b42929c086cc?crop=entropy&cs=tinysrgb&fit=max&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDk3fHxqZWFuc3xlbnwwfHx8fDE2NzU3NjI2MjQ&ixlib=rb-1.2.1&q=80&w=1080",
+      "quantity": 30,
+      "rating": 4.2
+    },
+    {
+      "id": 3,
+      "name": "Men's Hoodie",
+      "price": 60,
+      "description": "A stylish and warm hoodie for the winter season.",
+      "category": "Men's Clothes",
+      "image": "https://images.unsplash.com/photo-1579546928701-b6f20c6a5e1f?crop=entropy&cs=tinysrgb&fit=max&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDQ1fHxob29kaWV8ZW58MHx8fHwxNjc1NzYyMjQ&ixlib=rb-1.2.1&q=80&w=1080",
+      "quantity": 25,
+      "rating": 4.8
+    },
+    {
+      "id": 4,
+      "name": "Women's Dress",
+      "price": 55,
+      "description": "Elegant dress for evening occasions.",
+      "category": "Women's Clothes",
+      "image": "https://images.unsplash.com/photo-1516103442217-2e3e1d06f54d?crop=entropy&cs=tinysrgb&fit=max&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDE1fHxkcmVzc3xlbnwwfHx8fHwxNjc1NzYyMjQ&ixlib=rb-1.2.1&q=80&w=1080",
+      "quantity": 40,
+      "rating": 4.7
+    },
+    {
+      "id": 5,
+      "name": "Women's Blouse",
+      "price": 35,
+      "description": "Light and airy blouse perfect for sunny days.",
+      "category": "Women's Clothes",
+      "image": "https://images.unsplash.com/photo-1575906735697-e85e15e43c0f?crop=entropy&cs=tinysrgb&fit=max&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDUyfHxibG91c2V8ZW58MHx8fHwxNjc1NzYyMjQ&ixlib=rb-1.2.1&q=80&w=1080",
+      "quantity": 35,
+      "rating": 4.4
+    },
+    {
+      "id": 6,
+      "name": "Women's Skirt",
+      "price": 30,
+      "description": "A versatile skirt for all occasions.",
+      "category": "Women's Clothes",
+      "image": "https://images.unsplash.com/photo-1583581504236-411e7d88c9ab?crop=entropy&cs=tinysrgb&fit=max&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDY1fHxza2lydHxlbnwwfHx8fHwxNjc1NzYyMjQ&ixlib=rb-1.2.1&q=80&w=1080",
+      "quantity": 20,
+      "rating": 4.3
+    },
+    {
+      "id": 7,
+      "name": "Kids T-shirt",
+      "price": 15,
+      "description": "Soft cotton T-shirt for kids, available in various colors.",
+      "category": "Kids",
+      "image": "https://images.unsplash.com/photo-1575749705566-6c8464b2b4b8?crop=entropy&cs=tinysrgb&fit=max&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDYyfHx0YXR8ZW58MHx8fHwxNjc1NzYyMjQ&ixlib=rb-1.2.1&q=80&w=1080",
+      "quantity": 100,
+      "rating": 4.6
+    },
+    {
+      "id": 8,
+      "name": "Kids Shorts",
+      "price": 20,
+      "description": "Comfortable and stylish shorts for kids.",
+      "category": "Kids",
+      "image": "https://images.unsplash.com/photo-1574764466761-5b17f4f4565f?crop=entropy&cs=tinysrgb&fit=max&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDE5fHxzaG9ydHxlbnwwfHx8fHwxNjc1NzYyMjQ&ixlib=rb-1.2.1&q=80&w=1080",
+      "quantity": 80,
+      "rating": 4.7
+    },
+    {
+      "id": 9,
+      "name": "Kids Hoodie",
+      "price": 40,
+      "description": "Warm hoodie for kids, perfect for the cold season.",
+      "category": "Kids",
+      "image": "https://images.unsplash.com/photo-1556140540-7b1f13ab4286?crop=entropy&cs=tinysrgb&fit=max&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDg0fHxob29kaWV8ZW58MHx8fHwxNjc1NzYyMjQ&ixlib=rb-1.2.1&q=80&w=1080",
+      "quantity": 60,
+      "rating": 4.8
+    },
+    {
+      "id": 10,
+      "name": "Gold Necklace",
+      "price": 150,
+      "description": "Elegant gold necklace, perfect for special occasions.",
+      "category": "Jewelry",
+      "image": "https://images.unsplash.com/photo-1602226662615-beb4ca24ec2b?crop=entropy&cs=tinysrgb&fit=max&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDE3fHxnb2xkJTIwbmVja2xhY2V8ZW58MHx8fHwxNjc1NzYyMjQ&ixlib=rb-1.2.1&q=80&w=1080",
+      "quantity": 15,
+      "rating": 4.9
+    },
+    {
+      "id": 11,
+      "name": "Silver Ring",
+      "price": 90,
+      "description": "Classic silver ring, great for any occasion.",
+      "category": "Jewelry",
+      "image": "https://images.unsplash.com/photo-1587342782154-ff06fa9f2190?crop=entropy&cs=tinysrgb&fit=max&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDY5fHxyaW5nfGVufDB8fHx8fHwxNjc1NzYyMjQ&ixlib=rb-1.2.1&q=80&w=1080",
+      "quantity": 25,
+      "rating": 4.5
+    },
+    {
+      "id": 12,
+      "name": "Diamond Earrings",
+      "price": 250,
+      "description": "Stunning diamond earrings for special occasions.",
+      "category": "Jewelry",
+      "image": "https://images.unsplash.com/photo-1567054960-0c39b8c60c70?crop=entropy&cs=tinysrgb&fit=max&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDY4fHxkaWFtb25kJTIwZWFyaW5ncyxlbnwwfHx8fHwxNjc1NzYyMjQ&ixlib=rb-1.2.1&q=80&w=1080",
+      "quantity": 10,
+      "rating": 5
+    }
+  ],
+  "admins": [
+    {
+      "id": 1,
+      "username": "admin",
+      "password": "admin"
+    },
+    {
+      "id": 2,
+      "username": "admin2",
+      "password": "admin2"
+    }
+  ],
+  "offers": [
+    {
+      "id": 5,
+      "name": "Gold Bracelet",
+      "price": 180,
+      "originalPrice": 250,
+      "discountPercentage": 28,
+      "description": "An elegant gold bracelet, perfect for gifting or personal use.",
+      "category": "Jewelry",
+      "image": "https://images.unsplash.com/photo-1601707456779-4e90249d07a3?crop=entropy&cs=tinysrgb&fit=max&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDk5fHxnb2xkfGVufDB8fHx8fHwxNjc1NzYyMjQ&ixlib=rb-1.2.1&q=80&w=1080",
+      "quantity": 20,
+      "rating": 4.9,
+      "offerEndDate": "2025-03-01"
+    },
+    {
+      "id": 6,
+      "name": "Women's Watch",
+      "price": 120,
+      "originalPrice": 150,
+      "discountPercentage": 20,
+      "description": "A stylish and sleek watch for every occasion.",
+      "category": "Jewelry",
+      "image": "https://images.unsplash.com/photo-1562850134-9fd0b33b6b28?crop=entropy&cs=tinysrgb&fit=max&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDIwfHx3YXRjaHxlbnwwfHx8fHwxNjc1NzYyMjQ&ixlib=rb-1.2.1&q=80&w=1080",
+      "quantity": 30,
+      "rating": 4.8,
+      "offerEndDate": "2025-02-25"
+    },
+    {
+      "id": 7,
+      "name": "Kids Winter Jacket",
+      "price": 60,
+      "originalPrice": 80,
+      "discountPercentage": 25,
+      "description": "A warm jacket for kids, ideal for cold weather.",
+      "category": "Kids",
+      "image": "https://images.unsplash.com/photo-1601393017719-55164adad2c9?crop=entropy&cs=tinysrgb&fit=max&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDJ8fHxpbnRlcnNoaXBhY2VkZXxlbnwwfHx8fHwxNjc1NzYyMjQ&ixlib=rb-1.2.1&q=80&w=1080",
+      "quantity": 100,
+      "rating": 4.4,
+      "offerEndDate": "2025-03-10"
+    },
+
+    {
+      "id": 9,
+      "name": "Kids Hoodie",
+      "price": 35,
+      "originalPrice": 50,
+      "discountPercentage": 30,
+      "description": "A warm hoodie for kids, perfect for colder days.",
+      "category": "Kids",
+      "image": "https://images.unsplash.com/photo-1594191469252-4d4a19ac2491?crop=entropy&cs=tinysrgb&fit=max&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDE0fHxob29kaWV8ZW58MHx8fHwxNjc1NzYyMjQ&ixlib=rb-1.2.1&q=80&w=1080",
+      "quantity": 90,
+      "rating": 4.7,
+      "offerEndDate": "2025-02-18"
+    }
+  ]
+}
