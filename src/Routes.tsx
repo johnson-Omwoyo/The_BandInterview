@@ -11,14 +11,14 @@ const routes = [
   {
     route: "/",
     element: <App />,
-    erroElement: <ErrorPage />,
+    errorElement: <ErrorPage />,
     children: [
       { path: "/", element: <HomePage /> },
       { path: "/login", element: <AdminLogin /> },
       { path: "cart", element: <CartsPage /> },
       { path: "checkout", element: <CheckoutPage /> },
       { path: "details", element: <ProductDetails /> },
-      { path: "product", element: <ProductsPage /> },
+      { path: "products", element: <ProductsPage /> },
     ],
   },
 ];

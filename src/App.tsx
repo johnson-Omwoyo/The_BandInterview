@@ -8,6 +8,8 @@ function App() {
   return (
     <>
       <Navbar />
+      <hr className="p-0 m-0" />
+
       <Outlet />
       <Footer />
     </>
