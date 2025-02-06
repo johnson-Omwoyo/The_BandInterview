@@ -1,5 +1,9 @@
 function AdminLogin() {
-  return <div>Admin Login</div>;
+  return (
+    <div>
+      <h1>Admin Login</h1>
+    </div>
+  );
 }
 
-export default AdminLogin
+export default AdminLogin;
