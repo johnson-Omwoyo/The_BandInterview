@@ -1,6 +1,9 @@
 .navbar span {
   cursor: pointer;
 }
-.navbar .nav-link:hover{
-    color:rgb(217, 84, 51);
+.navbar .nav-link:hover {
+  color: rgb(217, 84, 51);
+}
+.click-we-deliver {
+  margin-top: -120px;
 }

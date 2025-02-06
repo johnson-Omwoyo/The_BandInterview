@@ -24,9 +24,11 @@ function Navbar() {
         <div className="col">
           <nav className="navbar navbar-expand-lg py-4">
             <div className="container-fluid">
-              <div className="navbar-brand" onClick={() => navigate("/")}>
-                <span className="click">Click</span>
-                <span className="cart">Cart</span>
+              <div className="navbar-brand text-center" style={{cursor:"pointer"}} onClick={() => navigate("/")}>
+                <p className="category-name text-dark">
+                  CLICKCART
+                </p>
+                <p style={{marginTop:"-24px",fontSize:"12px"}} className="text-secondary ">click we deliver</p>
               </div>
               <button
                 className="navbar-toggler"
