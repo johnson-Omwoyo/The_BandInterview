@@ -1,0 +1,6 @@
+.navbar span {
+  cursor: pointer;
+}
+.navbar .nav-link:hover{
+    color:rgb(217, 84, 51);
+}
