@@ -33,7 +33,16 @@ function HomePage() {
   const filterProducts = (products: Product[], category: string) => {
     return products.filter((product) => product.category === category);
   };
-  console.log(products);
+  const renderStars = (rating: number) => {
+    const totalStars = 5;
+    let filledStars = Math.round(rating);
+
+    let stars = "";
+    for (let i = 0; i < totalStars; i++) {
+      stars += i < filledStars ? "★" : "☆";
+    }
+    return stars;
+  };
 
   useEffect(() => {
     const baseUrl = "http://localhost:3000";
@@ -59,6 +68,15 @@ function HomePage() {
     fetchOffers();
     fetchProducts();
   }, []);
+
+  const sortProducts = (sortBy: string) => {
+    const sortedItemsPrice = products.sort((a, b) => a.price - b.price);
+    const sortedItems =
+      sortBy == "rating"
+        ? products.sort((a, b) => a.rating - b.rating)
+        : sortedItemsPrice;
+    setProducts([...sortedItems]);
+  };
 
   const navigate = useNavigate();
   return (
@@ -134,7 +152,7 @@ function HomePage() {
       <div className="row my-5">
         <div className="col">
           <div className="container">
-            <div className="row my-5">
+            <div className="row my-5 ">
               <div className="col">
                 <span className="category-name text-dark d-block fs-3">
                   Mens Latest
@@ -142,6 +160,23 @@ function HomePage() {
                 <span className="category-description text-secondary">
                   This will represent the description of the category
                 </span>
+              </div>
+              <div className="col d-flex justify-content-end">
+                <select
+                  name=""
+                  id=""
+                  className="custom-select"
+                  onChange={(e) => {
+                    sortProducts(e.target.value);
+                  }}
+                >
+                  <option value="" disabled selected>
+                    Sort by
+                  </option>
+                  <option value="price">Price</option>
+                  <option value="rating">Rating</option>
+                  <option value="random">Random</option>
+                </select>
               </div>
             </div>
             <div className="row align-items-center d-flex product-container">
@@ -152,17 +187,35 @@ function HomePage() {
               </div>
               {filterProducts(products, "Men's Clothes") ? (
                 filterProducts(products, "Men's Clothes").map((product) => (
-                  <div className="col-3">
+                  <div className="col-3 position-relative product-card2">
                     <img src={product.image} alt="" className="img w-100" />
                     <div className="justify-content-between d-flex">
                       <span className="category-name text-dark">
                         {product.name}
                       </span>
-                      <span className="category-name text-dark">*****</span>
+                      <span className="category-name text-dark">
+                        {renderStars(product.rating)}
+                      </span>
                     </div>
                     <span className="product-header text-secondary">
                       {product.price}
                     </span>
+                    <div className="position-absolute bottom-0 mb-5 w-100 gap-2 d-flex justify-content-center product-options">
+                      <button
+                        className="btn btn-danger rounded-pill"
+                        onClick={() =>
+                          navigate("/details", { state: { data: product } })
+                        }
+                      >
+                        <i className="fa-solid fa-eye"></i>
+                      </button>
+                      <button className="btn btn-danger rounded-pill">
+                        <i className="fa-solid fa-star"></i>
+                      </button>
+                      <button className="btn btn-danger rounded-pill">
+                        <i className="fa-solid fa-cart-plus"></i>{" "}
+                      </button>
+                    </div>
                   </div>
                 ))
               ) : (
@@ -193,17 +246,36 @@ function HomePage() {
               </div>
               {filterProducts(products, "Women's Clothes") ? (
                 filterProducts(products, "Women's Clothes").map((product) => (
-                  <div className="col-3">
+                  <div className="col-3 position-relative product-card2">
                     <img src={product.image} alt="" className="img w-100" />
                     <div className="justify-content-between d-flex">
                       <span className="category-name text-dark">
                         {product.name}
                       </span>
-                      <span className="category-name text-dark">*****</span>
+                      <span className="category-name text-dark">
+                        {" "}
+                        {renderStars(product.rating)}
+                      </span>
                     </div>
                     <span className="product-header text-secondary">
                       {product.price}
-                    </span>
+                    </span>{" "}
+                    <div className="position-absolute bottom-0 mb-5 w-100 gap-2 d-flex justify-content-center product-options">
+                      <button
+                        className="btn btn-danger rounded-pill"
+                        onClick={() =>
+                          navigate("/details", { state: { data: product } })
+                        }
+                      >
+                        <i className="fa-solid fa-eye"></i>
+                      </button>
+                      <button className="btn btn-danger rounded-pill">
+                        <i className="fa-solid fa-star"></i>
+                      </button>
+                      <button className="btn btn-danger rounded-pill">
+                        <i className="fa-solid fa-cart-plus"></i>{" "}
+                      </button>
+                    </div>
                   </div>
                 ))
               ) : (
@@ -234,17 +306,36 @@ function HomePage() {
               </div>
               {filterProducts(products, "Kids") ? (
                 filterProducts(products, "Kids").map((product) => (
-                  <div className="col-3">
+                  <div className="col-3 position-relative product-card2">
                     <img src={product.image} alt="" className="img w-100" />
                     <div className="justify-content-between d-flex">
                       <span className="category-name text-dark">
                         {product.name}
                       </span>
-                      <span className="category-name text-dark">*****</span>
+                      <span className="category-name text-dark">
+                        {" "}
+                        {renderStars(product.rating)}
+                      </span>
                     </div>
                     <span className="product-header text-secondary">
                       {product.price}
-                    </span>
+                    </span>{" "}
+                    <div className="position-absolute bottom-0 mb-5 w-100 gap-2 d-flex justify-content-center product-options">
+                      <button
+                        className="btn btn-danger rounded-pill"
+                        onClick={() =>
+                          navigate("/details", { state: { data: product } })
+                        }
+                      >
+                        <i className="fa-solid fa-eye"></i>
+                      </button>
+                      <button className="btn btn-danger rounded-pill">
+                        <i className="fa-solid fa-star"></i>
+                      </button>
+                      <button className="btn btn-danger rounded-pill">
+                        <i className="fa-solid fa-cart-plus"></i>{" "}
+                      </button>
+                    </div>
                   </div>
                 ))
               ) : (
@@ -275,17 +366,36 @@ function HomePage() {
               </div>
               {filterProducts(products, "Jewelry") ? (
                 filterProducts(products, "Jewelry").map((product) => (
-                  <div className="col-3">
+                  <div className="col-3 position-relative product-card2">
                     <img src={product.image} alt="" className="img w-100" />
                     <div className="justify-content-between d-flex">
                       <span className="category-name text-dark">
                         {product.name}
                       </span>
-                      <span className="category-name text-dark">*****</span>
+                      <span className="category-name text-dark">
+                        {" "}
+                        {renderStars(product.rating)}
+                      </span>
                     </div>
                     <span className="product-header text-secondary">
                       {product.price}
-                    </span>
+                    </span>{" "}
+                    <div className="position-absolute bottom-0 mb-5 w-100 gap-2 d-flex justify-content-center product-options">
+                      <button
+                        className="btn btn-danger rounded-pill"
+                        onClick={() =>
+                          navigate("/details", { state: { data: product } })
+                        }
+                      >
+                        <i className="fa-solid fa-eye"></i>
+                      </button>
+                      <button className="btn btn-danger rounded-pill">
+                        <i className="fa-solid fa-star"></i>
+                      </button>
+                      <button className="btn btn-danger rounded-pill">
+                        <i className="fa-solid fa-cart-plus"></i>{" "}
+                      </button>
+                    </div>
                   </div>
                 ))
               ) : (

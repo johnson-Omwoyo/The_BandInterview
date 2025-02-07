@@ -6,7 +6,7 @@
       "price": 25,
       "description": "A comfortable cotton T-shirt for everyday wear.",
       "category": "Men's Clothes",
-      "image": "https://images.unsplash.com/photo-1555640315-060d473c618b?crop=entropy&cs=tinysrgb&fit=max&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDI5fHx0c2hpcnR8ZW58MHx8fHwxNjc1NzYyMjQ&ixlib=rb-1.2.1&q=80&w=1080",
+      "image": "https://themewagon.github.io/hexashop/assets/images/men-01.jpg",
       "quantity": 50,
       "rating": 4.5
     },
@@ -46,7 +46,7 @@
       "price": 35,
       "description": "Light and airy blouse perfect for sunny days.",
       "category": "Women's Clothes",
-      "image": "https://images.unsplash.com/photo-1575906735697-e85e15e43c0f?crop=entropy&cs=tinysrgb&fit=max&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDUyfHxibG91c2V8ZW58MHx8fHwxNjc1NzYyMjQ&ixlib=rb-1.2.1&q=80&w=1080",
+      "image": "https://themewagon.github.io/hexashop/assets/images/women-01.jpg",
       "quantity": 35,
       "rating": 4.4
     },
@@ -68,7 +68,7 @@
       "category": "Kids",
       "image": "https://images.unsplash.com/photo-1575749705566-6c8464b2b4b8?crop=entropy&cs=tinysrgb&fit=max&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDYyfHx0YXR8ZW58MHx8fHwxNjc1NzYyMjQ&ixlib=rb-1.2.1&q=80&w=1080",
       "quantity": 100,
-      "rating": 4.6
+      "rating": 4.1
     },
     {
       "id": 8,
@@ -78,7 +78,7 @@
       "category": "Kids",
       "image": "https://images.unsplash.com/photo-1574764466761-5b17f4f4565f?crop=entropy&cs=tinysrgb&fit=max&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDE5fHxzaG9ydHxlbnwwfHx8fHwxNjc1NzYyMjQ&ixlib=rb-1.2.1&q=80&w=1080",
       "quantity": 80,
-      "rating": 4.7
+      "rating": 2
     },
     {
       "id": 9,
@@ -88,7 +88,7 @@
       "category": "Kids",
       "image": "https://images.unsplash.com/photo-1556140540-7b1f13ab4286?crop=entropy&cs=tinysrgb&fit=max&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDg0fHxob29kaWV8ZW58MHx8fHwxNjc1NzYyMjQ&ixlib=rb-1.2.1&q=80&w=1080",
       "quantity": 60,
-      "rating": 4.8
+      "rating": 4
     },
     {
       "id": 10,
