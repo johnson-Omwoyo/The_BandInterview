@@ -1,0 +1,14 @@
+.page-head {
+  max-height: 360px;
+  object-fit: cover;
+  /* height: 10px; */
+}
+.quantity-field {
+  border: solid 1px grey;
+}
+.cat-name {
+  font-family: sans-serif;
+
+  font-weight: 700;
+  opacity: 0.5;
+}
