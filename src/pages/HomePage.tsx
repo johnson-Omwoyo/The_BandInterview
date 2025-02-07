@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import "./HomePage.css";
 import { useNavigate } from "react-router-dom";
+import { handleAddToCart } from "../components/GlobalData";
 
 function HomePage() {
   interface Offer {
@@ -126,13 +127,25 @@ function HomePage() {
                         {offer.description}
                       </span>
                       <div className="gap-2 d-flex">
-                        <button className="btn btn-danger rounded-pill add-cart">
+                        <button
+                          className="btn btn-danger rounded-pill add-cart"
+                          onClick={() =>
+                            handleAddToCart(
+                              {
+                                id: offer.id,
+                                name: offer.name,
+                                price: offer.price,
+                              },
+                              1
+                            )
+                          }
+                        >
                           <i className="fa-solid fa-cart-plus"></i>
                         </button>
                         <button
                           className="btn btn-danger rounded-pill add-cart"
                           onClick={() =>
-                            navigate("/details", { state: { data: "data" } })
+                            navigate("/details", { state: { data: offer } })
                           }
                         >
                           <i className="fa-solid fa-eye"></i>
@@ -175,7 +188,6 @@ function HomePage() {
                   </option>
                   <option value="price">Price</option>
                   <option value="rating">Rating</option>
-                  <option value="random">Random</option>
                 </select>
               </div>
             </div>
@@ -212,7 +224,19 @@ function HomePage() {
                       <button className="btn btn-danger rounded-pill">
                         <i className="fa-solid fa-star"></i>
                       </button>
-                      <button className="btn btn-danger rounded-pill">
+                      <button
+                        className="btn btn-danger rounded-pill"
+                        onClick={() =>
+                          handleAddToCart(
+                            {
+                              id: product.id,
+                              name: product.name,
+                              price: product.price,
+                            },
+                            1
+                          )
+                        }
+                      >
                         <i className="fa-solid fa-cart-plus"></i>{" "}
                       </button>
                     </div>

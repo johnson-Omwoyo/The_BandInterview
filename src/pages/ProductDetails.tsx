@@ -1,6 +1,7 @@
 import { useLocation } from "react-router-dom";
 import "./ProductDetails.css";
 import { useState } from "react";
+import { handleAddToCart } from "../components/GlobalData";
 
 function ProductDetails() {
   const location = useLocation();
@@ -87,7 +88,21 @@ function ProductDetails() {
                   <span className="cat-name fs-3">
                     Total: {data.price * quantity}
                   </span>
-                  <button className="btn btn-danger">Add To Cart</button>
+                  <button
+                    className="btn btn-danger"
+                    onClick={() =>
+                      handleAddToCart(
+                        {
+                          id: data.id,
+                          name: data.name,
+                          price: data.price,
+                        },
+                        quantity
+                      )
+                    }
+                  >
+                    Add To Cart
+                  </button>
                 </div>
               </div>
             </div>
