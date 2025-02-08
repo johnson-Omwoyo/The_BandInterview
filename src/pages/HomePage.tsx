@@ -48,21 +48,21 @@ function HomePage() {
   };
 
   useEffect(() => {
-    const baseUrl = "http://localhost:3000";
+    const baseUrl = "https://gist.githubusercontent.com/johnson-Omwoyo/6ee07928734d5a3f56f996cc1f6d3cd3/raw/4a25295ee4550f42a7292700da8bde822489f94d/clickkcart.json";
     const fetchOffers = async () => {
       try {
-        const response = await fetch(`${baseUrl}/offers`);
+        const response = await fetch(`${baseUrl}`);
         const data = await response.json();
-        setOffers(data);
+        setOffers(data.offers);
       } catch (error) {
         console.log("Error fetching offers:", error);
       }
     };
     const fetchProducts = async () => {
       try {
-        const response = await fetch(`${baseUrl}/products`);
+        const response = await fetch(`${baseUrl}`);
         const data = await response.json();
-        setProducts(data);
+        setProducts(data.products);
       } catch (error) {
         console.log("Error fetching products:", error);
       }

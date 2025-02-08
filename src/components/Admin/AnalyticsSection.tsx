@@ -1,4 +1,3 @@
-
 import { Card } from "react-bootstrap";
 import { Line } from "react-chartjs-2";
 import {
@@ -23,7 +22,6 @@ ChartJS.register(
 );
 
 const AnalyticsSection = () => {
-  // Sample data for sales performance graph
   const salesData = {
     labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
     datasets: [
@@ -37,9 +35,8 @@ const AnalyticsSection = () => {
     ],
   };
 
-  // Product comparison data
   const productComparisonData = {
-    labels: ["Product A", "Product B", "Product C"],
+    labels: ["Women Blouse", "Scool shoe", " Neck chain"],
     datasets: [
       {
         label: "Sales",
@@ -49,11 +46,10 @@ const AnalyticsSection = () => {
     ],
   };
 
-  // Inventory status
   const inventoryStatus = [
-    { product: "Product A", stock: 15 },
-    { product: "Product B", stock: 5 },
-    { product: "Product C", stock: 20 },
+    { product: " Women Blouse", stock: 15 },
+    { product: " Kids School jacket", stock: 5 },
+    { product: " Unisex watch", stock: 20 },
   ];
 
   return (

@@ -13,7 +13,8 @@ interface LoginFormValues {
 
 const Login: React.FC = () => {
   const navigate = useNavigate();
-  const base_url = "http://localhost:3000";
+  const base_url =
+    "https://gist.githubusercontent.com/johnson-Omwoyo/6ee07928734d5a3f56f996cc1f6d3cd3/raw/4a25295ee4550f42a7292700da8bde822489f94d/clickkcart.json";
   const [loggedInAlert, setLoggedInAlert] = useState<boolean>(false);
   const [failedLoginAlert, setFailedLoginAlert] = useState<boolean>(false);
 
@@ -21,10 +22,10 @@ const Login: React.FC = () => {
   const handleLogin = async (values: LoginFormValues) => {
     try {
       // Fetching admins from localhost
-      const response = await axios.get(`${base_url}/admins`);
+      const response = await axios.get(`${base_url}`);
 
       const admins = response.data;
-      const user = admins.find(
+      const user = admins.admins.find(
         (admin: { username: string; password: string }) =>
           admin.username === values.username &&
           admin.password === values.password

@@ -1,4 +1,4 @@
-import  { useState } from "react";
+import { useState } from "react";
 import { Card, Button, ListGroup, Modal } from "react-bootstrap";
 import { Formik, Field, Form } from "formik";
 import * as Yup from "yup";
@@ -12,10 +12,10 @@ interface Product {
 
 const ProductManagementSection = () => {
   const [showModal, setShowModal] = useState(false);
-  const [editProduct, setEditProduct] = useState<Product | null>(null); // Updated for type safety
+  const [editProduct, setEditProduct] = useState<Product | null>(null);
   const [products, setProducts] = useState<Product[]>([
-    { id: 1, name: "Product A", price: 20, stock: 50 },
-    { id: 2, name: "Product B", price: 15, stock: 100 },
+    { id: 1, name: " shirt", price: 20, stock: 50 },
+    { id: 2, name: "Trouser", price: 15, stock: 100 },
   ]);
 
   const handleShowModal = (product: Product) => {

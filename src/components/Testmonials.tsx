@@ -10,7 +10,6 @@ import {
 } from "reactstrap";
 import "./Testimonials.css";
 
-
 const Rating = ({ rating = 0 }: { rating: number }) => {
   const filledStars = Array(rating).fill("★");
   const emptyStars = Array(5 - rating).fill("☆");
@@ -31,7 +30,6 @@ const Rating = ({ rating = 0 }: { rating: number }) => {
   );
 };
 
-
 interface Review {
   name: string;
   review: string;
@@ -39,19 +37,21 @@ interface Review {
 }
 
 const Testimonials = () => {
-  const baseUrl = "http://localhost:3000";
-  const [reviews, setReviews] = useState<Review[]>([]); 
+  const baseUrl =
+    "https://gist.githubusercontent.com/johnson-Omwoyo/6ee07928734d5a3f56f996cc1f6d3cd3/raw/4a25295ee4550f42a7292700da8bde822489f94d/clickkcart.json";
+  const [reviews, setReviews] = useState<Review[]>([]);
 
   useEffect(() => {
-   
     const fetchReviews = async () => {
       try {
-        const response = await fetch(`${baseUrl}/testmonials`);
+        const response = await fetch(`${baseUrl}`);
         if (!response.ok) {
           throw new Error("Network response was not ok");
         }
         const data = await response.json();
-        setReviews(data);
+        console.log(data);
+
+        setReviews(data.testmonials[0]);
       } catch (error) {
         console.error("Error fetching reviews:", error);
       }

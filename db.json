@@ -189,7 +189,7 @@
     }
   ],
   "testmonials": [
-    [
+    
       {
         "name": "Henry Band",
         "review": "This product is amazing! Highly recommend.",
@@ -206,5 +206,5 @@
         "rating": 4
       }
     ]
-  ]
+  
 }
