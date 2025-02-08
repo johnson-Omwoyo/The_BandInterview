@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import {
   Container,
   Row,
@@ -10,9 +10,11 @@ import {
 } from "reactstrap";
 import "./Testimonials.css";
 
-const Rating = ({ rating = 0 }) => {
+
+const Rating = ({ rating = 0 }: { rating: number }) => {
   const filledStars = Array(rating).fill("★");
   const emptyStars = Array(5 - rating).fill("☆");
+
   return (
     <div className="rating">
       {filledStars.map((star, index) => (
@@ -29,11 +31,19 @@ const Rating = ({ rating = 0 }) => {
   );
 };
 
+
+interface Review {
+  name: string;
+  review: string;
+  rating: number;
+}
+
 const Testimonials = () => {
   const baseUrl = "http://localhost:3000";
-  const [reviews, setReviews] = useState([]);
+  const [reviews, setReviews] = useState<Review[]>([]); 
 
   useEffect(() => {
+   
     const fetchReviews = async () => {
       try {
         const response = await fetch(`${baseUrl}/testmonials`);
@@ -41,11 +51,12 @@ const Testimonials = () => {
           throw new Error("Network response was not ok");
         }
         const data = await response.json();
-        setReviews(data[0]);
+        setReviews(data);
       } catch (error) {
-        console.error("Error:", error);
+        console.error("Error fetching reviews:", error);
       }
     };
+
     fetchReviews();
   }, []);
 
@@ -53,26 +64,32 @@ const Testimonials = () => {
     <Container className="testimonials my-5">
       <h2 className="text-center mb-4 category-name text-dark">Testimonials</h2>
       <Row>
-        {reviews.map((review, index) => (
-          <Col key={index} md={4} className="mb-4">
-            <Card className="shadow-sm rounded-lg">
-              <CardBody>
-                <CardTitle
-                  tag="h5"
-                  className="text-center mb-3 category-name text-dark"
-                >
-                  {review.name}
-                </CardTitle>
-                <CardText className="text-muted text-center">
-                  {review.review}
-                </CardText>
-                <div className="text-center">
-                  <Rating rating={review.rating} />
-                </div>
-              </CardBody>
-            </Card>
-          </Col>
-        ))}
+        {reviews.length === 0 ? (
+          <div className="col-12 text-center">
+            <p>No testimonials available.</p>
+          </div>
+        ) : (
+          reviews.map((review, index) => (
+            <Col key={index} md={4} className="mb-4">
+              <Card className="shadow-sm rounded-lg">
+                <CardBody>
+                  <CardTitle
+                    tag="h5"
+                    className="text-center mb-3 category-name text-dark"
+                  >
+                    {review.name}
+                  </CardTitle>
+                  <CardText className="text-muted text-center">
+                    {review.review}
+                  </CardText>
+                  <div className="text-center">
+                    <Rating rating={review.rating} />
+                  </div>
+                </CardBody>
+              </Card>
+            </Col>
+          ))
+        )}
       </Row>
     </Container>
   );
