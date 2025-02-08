@@ -1,15 +1,9 @@
 import { useCart } from "../components/CartContext";
 import { useNavigate } from "react-router-dom";
 
-const CheckoutPage = () => {
+const OrderConfirmationPage = () => {
   const { cartItems } = useCart();
   const navigate = useNavigate();
-
-  const handlePlaceOrder = () => {
-    // Here you can implement order placement logic (e.g., send data to an API)
-    console.log("Order placed:", cartItems);
-    navigate("/order-confirmation"); // Redirect to an order confirmation page
-  };
 
   const totalAmount = cartItems.reduce(
     (total, item) => total + item.price * item.quantity,
@@ -18,7 +12,12 @@ const CheckoutPage = () => {
 
   return (
     <div className="container my-4">
-      <h3>Checkout</h3>
+      <h3>Order Confirmation</h3>
+      <div className="alert alert-success">
+        <i className="fa-solid fa-circle-check"></i> Your order has been placed successfully!
+      </div>
+
+      <h5>Order Details</h5>
       <table className="table">
         <thead>
           <tr>
@@ -43,11 +42,12 @@ const CheckoutPage = () => {
         <h5>Total Amount</h5>
         <h5>${totalAmount}</h5>
       </div>
-      <button className="btn btn-success" onClick={handlePlaceOrder}>
-        Place Order
+
+      <button className="btn btn-primary" onClick={() => navigate("/")}>
+        Go to Home
       </button>
     </div>
   );
 };
 
-export default CheckoutPage;
+export default OrderConfirmationPage;

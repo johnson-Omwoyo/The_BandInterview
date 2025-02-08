@@ -1,7 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import "./HomePage.css";
 import { useNavigate } from "react-router-dom";
-import { handleAddToCart } from "../components/GlobalData";
+import { useCart } from "../components/CartContext";
+import Testimonials from "../components/Testmonials";
 
 function HomePage() {
   interface Offer {
@@ -30,6 +31,7 @@ function HomePage() {
 
   const [offers, setOffers] = useState<Offer[]>([]);
   const [products, setProducts] = useState<Product[]>([]);
+  const { handleAddToCart } = useCart();
 
   const filterProducts = (products: Product[], category: string) => {
     return products.filter((product) => product.category === category);
@@ -107,7 +109,7 @@ function HomePage() {
                 offers.map((offer) => (
                   <div className="col-6 position-relative product-card my-3 ">
                     <img
-                      src="https://themewagon.github.io/hexashop/assets/images/baner-right-image-01.jpg"
+                      src={offer.image}
                       alt=""
                       className="img-fluid w-100 "
                     />
@@ -119,7 +121,13 @@ function HomePage() {
                         {offer.description}
                       </span>
                     </div>
+
                     <div className="position-absolute d-flex div-onhover m-3 top-0 align-items-center flex-column gap-3 justify-content-center z-1">
+                      <div>
+                        <button className="btn btn-danger rounded-pill add-cart">
+                          30% Offer
+                        </button>
+                      </div>
                       <span className="d-block category-name fs-2">
                         {offer.name}
                       </span>
@@ -135,6 +143,7 @@ function HomePage() {
                                 id: offer.id,
                                 name: offer.name,
                                 price: offer.price,
+                                image: offer.image,
                               },
                               1
                             )
@@ -161,7 +170,6 @@ function HomePage() {
           </div>
         </div>{" "}
       </div>
-
       <div className="row my-5">
         <div className="col">
           <div className="container">
@@ -192,11 +200,7 @@ function HomePage() {
               </div>
             </div>
             <div className="row align-items-center d-flex product-container">
-              <div className="col-1">
-                <button className="btn btn-danger " onClick={() => {}}>
-                  <i className="fa-solid fa-chevron-left"></i>
-                </button>
-              </div>
+              <div className="col-1"></div>
               {filterProducts(products, "Men's Clothes") ? (
                 filterProducts(products, "Men's Clothes").map((product) => (
                   <div className="col-3 position-relative product-card2">
@@ -221,9 +225,7 @@ function HomePage() {
                       >
                         <i className="fa-solid fa-eye"></i>
                       </button>
-                      <button className="btn btn-danger rounded-pill">
-                        <i className="fa-solid fa-star"></i>
-                      </button>
+
                       <button
                         className="btn btn-danger rounded-pill"
                         onClick={() =>
@@ -232,6 +234,7 @@ function HomePage() {
                               id: product.id,
                               name: product.name,
                               price: product.price,
+                              image: product.image,
                             },
                             1
                           )
@@ -293,10 +296,21 @@ function HomePage() {
                       >
                         <i className="fa-solid fa-eye"></i>
                       </button>
-                      <button className="btn btn-danger rounded-pill">
-                        <i className="fa-solid fa-star"></i>
-                      </button>
-                      <button className="btn btn-danger rounded-pill">
+
+                      <button
+                        className="btn btn-danger rounded-pill"
+                        onClick={() =>
+                          handleAddToCart(
+                            {
+                              id: product.id,
+                              name: product.name,
+                              price: product.price,
+                              image: product.image,
+                            },
+                            1
+                          )
+                        }
+                      >
                         <i className="fa-solid fa-cart-plus"></i>{" "}
                       </button>
                     </div>
@@ -353,10 +367,21 @@ function HomePage() {
                       >
                         <i className="fa-solid fa-eye"></i>
                       </button>
-                      <button className="btn btn-danger rounded-pill">
-                        <i className="fa-solid fa-star"></i>
-                      </button>
-                      <button className="btn btn-danger rounded-pill">
+
+                      <button
+                        className="btn btn-danger rounded-pill"
+                        onClick={() =>
+                          handleAddToCart(
+                            {
+                              id: product.id,
+                              name: product.name,
+                              price: product.price,
+                              image: product.image,
+                            },
+                            1
+                          )
+                        }
+                      >
                         <i className="fa-solid fa-cart-plus"></i>{" "}
                       </button>
                     </div>
@@ -372,67 +397,12 @@ function HomePage() {
                 </button>
               </div>
             </div>{" "}
-            <div className="row my-5">
-              <div className="col">
-                <span className="category-name text-dark d-block fs-3">
-                  Jewelery{" "}
-                </span>
-                <span className="category-description text-secondary">
-                  This will represent the description of the category
-                </span>
-              </div>
-            </div>
-            <div className="row align-items-center d-flex product-container">
-              <div className="col-1">
-                <button className="btn btn-danger " onClick={() => {}}>
-                  <i className="fa-solid fa-chevron-left"></i>
-                </button>
-              </div>
-              {filterProducts(products, "Jewelry") ? (
-                filterProducts(products, "Jewelry").map((product) => (
-                  <div className="col-3 position-relative product-card2">
-                    <img src={product.image} alt="" className="img w-100" />
-                    <div className="justify-content-between d-flex">
-                      <span className="category-name text-dark">
-                        {product.name}
-                      </span>
-                      <span className="category-name text-dark">
-                        {" "}
-                        {renderStars(product.rating)}
-                      </span>
-                    </div>
-                    <span className="product-header text-secondary">
-                      {product.price}
-                    </span>{" "}
-                    <div className="position-absolute bottom-0 mb-5 w-100 gap-2 d-flex justify-content-center product-options">
-                      <button
-                        className="btn btn-danger rounded-pill"
-                        onClick={() =>
-                          navigate("/details", { state: { data: product } })
-                        }
-                      >
-                        <i className="fa-solid fa-eye"></i>
-                      </button>
-                      <button className="btn btn-danger rounded-pill">
-                        <i className="fa-solid fa-star"></i>
-                      </button>
-                      <button className="btn btn-danger rounded-pill">
-                        <i className="fa-solid fa-cart-plus"></i>{" "}
-                      </button>
-                    </div>
-                  </div>
-                ))
-              ) : (
-                <h1>no products</h1>
-              )}
-
-              <div className="col-1">
-                <button className="btn btn-danger">
-                  <i className="fa-solid fa-chevron-right"></i>
-                </button>
-              </div>
-            </div>
           </div>
+        </div>
+      </div>
+      <div className="row">
+        <div className="col">
+          <Testimonials />
         </div>
       </div>
     </div>

@@ -1,13 +1,15 @@
 import { useLocation } from "react-router-dom";
 import "./ProductDetails.css";
 import { useState } from "react";
-import { handleAddToCart } from "../components/GlobalData";
+import { useCart } from "../components/CartContext";
 
-function ProductDetails() {
+
+export default function ProductDetails() {
   const location = useLocation();
 
   const data = location.state?.data;
-  console.log(data);
+
+  const { handleAddToCart } = useCart();
 
   const renderStars = (rating: number) => {
     const totalStars = 5;
@@ -21,7 +23,7 @@ function ProductDetails() {
   };
   const [quantity, setQuantity] = useState(1);
 
-  const handleQuantity = (operation: string) => {
+ const handleQuantity = (operation: string) => {
     if (operation === "+") {
       setQuantity(quantity + 1);
     } else if (operation === "-" && quantity > 1) {
@@ -96,6 +98,7 @@ function ProductDetails() {
                           id: data.id,
                           name: data.name,
                           price: data.price,
+                          image: data.image,
                         },
                         quantity
                       )
@@ -113,4 +116,4 @@ function ProductDetails() {
   );
 }
 
-export default ProductDetails;
+

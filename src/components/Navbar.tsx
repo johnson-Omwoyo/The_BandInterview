@@ -1,34 +1,32 @@
-import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import "./Navbar.css";
+import { useCart } from "./CartContext";
+import { useEffect } from "react";
 
 function Navbar() {
   const navigate = useNavigate();
+  const { cartItems } = useCart();
+  useEffect(() => {}, [cartItems]);
 
-  interface CartItem {
-    id: number;
-    quantity: number;
-  }
-  const [cartItems, setCartItems] = useState<CartItem[]>([
-    { id: 1, quantity: 2 },
-    { id: 2, quantity: 1 },
-    {
-      id: 3,
-      quantity: 3,
-    },
-  ]);
   return (
     <div className="container">
       <div className="row">
         <div className="col">
           <nav className="navbar navbar-expand-lg py-2 ">
             <div className="container-fluid">
-              <div className="navbar-brand text-center" style={{cursor:"pointer"}} onClick={() => navigate("/")}>
-                <p className="category-name text-dark">
-                  CLICKCART
+              <div
+                className="navbar-brand text-center"
+                style={{ cursor: "pointer" }}
+                onClick={() => navigate("/")}
+              >
+                <p className="category-name text-dark">CLICKCART</p>
+                <p
+                  style={{ marginTop: "-24px", fontSize: "12px" }}
+                  className="text-secondary "
+                >
+                  click we deliver
                 </p>
-                <p style={{marginTop:"-24px",fontSize:"12px"}} className="text-secondary ">click we deliver</p>
               </div>
               <button
                 className="navbar-toggler"
@@ -48,14 +46,7 @@ function Navbar() {
                       Home
                     </span>
                   </li>
-                  <li className="nav-item">
-                    <span
-                      className="nav-link"
-                      onClick={() => navigate("/products")}
-                    >
-                      Shop
-                    </span>
-                  </li>
+
                   <li className="nav-item">
                     <span
                       className="nav-link"

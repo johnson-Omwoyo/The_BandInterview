@@ -1,0 +1,62 @@
+.testimonials {
+  padding: 2rem 0;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.card {
+  border: none;
+  background-color: #f8f9fa;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+  padding: 1.5rem;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.card-text {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #555;
+}
+
+.rating {
+  font-size: 1.25rem;
+  color: #f39c12;
+}
+
+.star {
+  margin: 0 2px;
+}
+
+.star.filled {
+  color: #f39c12; /* Gold color for filled stars */
+}
+
+.star {
+  color: #dcdcdc; /* Gray color for empty stars */
+}
+
+@media (max-width: 768px) {
+  .card-body {
+    padding: 1rem;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+  }
+}

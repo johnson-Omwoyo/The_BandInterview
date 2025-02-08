@@ -1,9 +1,11 @@
 import App from "./App";
+import AdminDashboard from "./components/Admin/AdminDashboard";
 import AdminLogin from "./pages/AdminLogin";
 import CartsPage from "./pages/CartsPage";
 import CheckoutPage from "./pages/CheckoutPage";
 import ErrorPage from "./pages/ErrorPage";
 import HomePage from "./pages/HomePage";
+import OrderConfirmationPage from "./pages/OrderConfirmation";
 import ProductDetails from "./pages/ProductDetails";
 import ProductsPage from "./pages/ProductsPage";
 
@@ -19,6 +21,8 @@ const routes = [
       { path: "checkout", element: <CheckoutPage /> },
       { path: "details", element: <ProductDetails /> },
       { path: "products", element: <ProductsPage /> },
+      { path: "/dashboard", element: <AdminDashboard /> },
+      { path: "/order-confirmation", element: <OrderConfirmationPage /> },
     ],
   },
 ];
