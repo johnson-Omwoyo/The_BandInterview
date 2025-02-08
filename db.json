@@ -16,7 +16,7 @@
       "price": 40,
       "description": "Classic fit jeans, perfect for casual outings.",
       "category": "Men's Clothes",
-      "image": "https://images.unsplash.com/photo-1591619985974-b42929c086cc?crop=entropy&cs=tinysrgb&fit=max&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDk3fHxqZWFuc3xlbnwwfHx8fDE2NzU3NjI2MjQ&ixlib=rb-1.2.1&q=80&w=1080",
+      "image": "https://themewagon.github.io/hexashop/assets/images/men-02.jpg",
       "quantity": 30,
       "rating": 4.2
     },
@@ -26,7 +26,7 @@
       "price": 60,
       "description": "A stylish and warm hoodie for the winter season.",
       "category": "Men's Clothes",
-      "image": "https://images.unsplash.com/photo-1579546928701-b6f20c6a5e1f?crop=entropy&cs=tinysrgb&fit=max&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDQ1fHxob29kaWV8ZW58MHx8fHwxNjc1NzYyMjQ&ixlib=rb-1.2.1&q=80&w=1080",
+      "image": "https://themewagon.github.io/hexashop/assets/images/men-03.jpg",
       "quantity": 25,
       "rating": 4.8
     },
@@ -36,7 +36,7 @@
       "price": 55,
       "description": "Elegant dress for evening occasions.",
       "category": "Women's Clothes",
-      "image": "https://images.unsplash.com/photo-1516103442217-2e3e1d06f54d?crop=entropy&cs=tinysrgb&fit=max&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDE1fHxkcmVzc3xlbnwwfHx8fHwxNjc1NzYyMjQ&ixlib=rb-1.2.1&q=80&w=1080",
+      "image": "https://themewagon.github.io/hexashop/assets/images/women-01.jpg",
       "quantity": 40,
       "rating": 4.7
     },
@@ -46,7 +46,7 @@
       "price": 35,
       "description": "Light and airy blouse perfect for sunny days.",
       "category": "Women's Clothes",
-      "image": "https://themewagon.github.io/hexashop/assets/images/women-01.jpg",
+      "image": "https://themewagon.github.io/hexashop/assets/images/women-02.jpg",
       "quantity": 35,
       "rating": 4.4
     },
@@ -56,7 +56,7 @@
       "price": 30,
       "description": "A versatile skirt for all occasions.",
       "category": "Women's Clothes",
-      "image": "https://images.unsplash.com/photo-1583581504236-411e7d88c9ab?crop=entropy&cs=tinysrgb&fit=max&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDY1fHxza2lydHxlbnwwfHx8fHwxNjc1NzYyMjQ&ixlib=rb-1.2.1&q=80&w=1080",
+      "image": "https://themewagon.github.io/hexashop/assets/images/women-03.jpg",
       "quantity": 20,
       "rating": 4.3
     },
@@ -66,7 +66,7 @@
       "price": 15,
       "description": "Soft cotton T-shirt for kids, available in various colors.",
       "category": "Kids",
-      "image": "https://images.unsplash.com/photo-1575749705566-6c8464b2b4b8?crop=entropy&cs=tinysrgb&fit=max&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDYyfHx0YXR8ZW58MHx8fHwxNjc1NzYyMjQ&ixlib=rb-1.2.1&q=80&w=1080",
+      "image": "https://themewagon.github.io/hexashop/assets/images/kid-01.jpg",
       "quantity": 100,
       "rating": 4.1
     },
@@ -76,7 +76,7 @@
       "price": 20,
       "description": "Comfortable and stylish shorts for kids.",
       "category": "Kids",
-      "image": "https://images.unsplash.com/photo-1574764466761-5b17f4f4565f?crop=entropy&cs=tinysrgb&fit=max&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDE5fHxzaG9ydHxlbnwwfHx8fHwxNjc1NzYyMjQ&ixlib=rb-1.2.1&q=80&w=1080",
+      "image": "https://themewagon.github.io/hexashop/assets/images/kid-02.jpg",
       "quantity": 80,
       "rating": 2
     },
@@ -86,7 +86,7 @@
       "price": 40,
       "description": "Warm hoodie for kids, perfect for the cold season.",
       "category": "Kids",
-      "image": "https://images.unsplash.com/photo-1556140540-7b1f13ab4286?crop=entropy&cs=tinysrgb&fit=max&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDg0fHxob29kaWV8ZW58MHx8fHwxNjc1NzYyMjQ&ixlib=rb-1.2.1&q=80&w=1080",
+      "image": "https://themewagon.github.io/hexashop/assets/images/kid-03.jpg",
       "quantity": 60,
       "rating": 4
     },
@@ -142,7 +142,7 @@
       "discountPercentage": 28,
       "description": "An elegant gold bracelet, perfect for gifting or personal use.",
       "category": "Jewelry",
-      "image": "https://images.unsplash.com/photo-1601707456779-4e90249d07a3?crop=entropy&cs=tinysrgb&fit=max&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDk5fHxnb2xkfGVufDB8fHx8fHwxNjc1NzYyMjQ&ixlib=rb-1.2.1&q=80&w=1080",
+      "image": "https://themewagon.github.io/hexashop/assets/images/baner-right-image-02.jpg",
       "quantity": 20,
       "rating": 4.9,
       "offerEndDate": "2025-03-01"
@@ -155,7 +155,7 @@
       "discountPercentage": 20,
       "description": "A stylish and sleek watch for every occasion.",
       "category": "Jewelry",
-      "image": "https://images.unsplash.com/photo-1562850134-9fd0b33b6b28?crop=entropy&cs=tinysrgb&fit=max&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDIwfHx3YXRjaHxlbnwwfHx8fHwxNjc1NzYyMjQ&ixlib=rb-1.2.1&q=80&w=1080",
+      "image": "https://themewagon.github.io/hexashop/assets/images/baner-right-image-01.jpg",
       "quantity": 30,
       "rating": 4.8,
       "offerEndDate": "2025-02-25"
@@ -168,7 +168,7 @@
       "discountPercentage": 25,
       "description": "A warm jacket for kids, ideal for cold weather.",
       "category": "Kids",
-      "image": "https://images.unsplash.com/photo-1601393017719-55164adad2c9?crop=entropy&cs=tinysrgb&fit=max&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDJ8fHxpbnRlcnNoaXBhY2VkZXxlbnwwfHx8fHwxNjc1NzYyMjQ&ixlib=rb-1.2.1&q=80&w=1080",
+      "image": "https://themewagon.github.io/hexashop/assets/images/baner-right-image-03.jpg",
       "quantity": 100,
       "rating": 4.4,
       "offerEndDate": "2025-03-10"
@@ -182,10 +182,29 @@
       "discountPercentage": 30,
       "description": "A warm hoodie for kids, perfect for colder days.",
       "category": "Kids",
-      "image": "https://images.unsplash.com/photo-1594191469252-4d4a19ac2491?crop=entropy&cs=tinysrgb&fit=max&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDE0fHxob29kaWV8ZW58MHx8fHwxNjc1NzYyMjQ&ixlib=rb-1.2.1&q=80&w=1080",
+      "image": "https://themewagon.github.io/hexashop/assets/images/baner-right-image-04.jpg",
       "quantity": 90,
       "rating": 4.7,
       "offerEndDate": "2025-02-18"
     }
+  ],
+  "testmonials": [
+    [
+      {
+        "name": "Henry Band",
+        "review": "This product is amazing! Highly recommend.",
+        "rating": 5
+      },
+      {
+        "name": "Johnson & Johnson",
+        "review": "Good quality, but could be improved in certain areas.",
+        "rating": 3
+      },
+      {
+        "name": "Jermain Coole",
+        "review": "As real as what i orderd.",
+        "rating": 4
+      }
+    ]
   ]
 }
