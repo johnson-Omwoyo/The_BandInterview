@@ -48,7 +48,8 @@ function HomePage() {
   };
 
   useEffect(() => {
-    const baseUrl = "https://gist.githubusercontent.com/johnson-Omwoyo/6ee07928734d5a3f56f996cc1f6d3cd3/raw/4a25295ee4550f42a7292700da8bde822489f94d/clickkcart.json";
+    const baseUrl =
+      "https://gist.githubusercontent.com/johnson-Omwoyo/6ee07928734d5a3f56f996cc1f6d3cd3/raw/4a25295ee4550f42a7292700da8bde822489f94d/clickkcart.json";
     const fetchOffers = async () => {
       try {
         const response = await fetch(`${baseUrl}`);
@@ -200,10 +201,10 @@ function HomePage() {
               </div>
             </div>
             <div className="row align-items-center d-flex product-container">
-              <div className="col-1"></div>
+              <div className="col-1 d-none d-md-flex"></div>
               {filterProducts(products, "Men's Clothes") ? (
                 filterProducts(products, "Men's Clothes").map((product) => (
-                  <div className="col-3 position-relative product-card2">
+                  <div className="col-6 col-md-3 position-relative product-card2">
                     <img src={product.image} alt="" className="img w-100" />
                     <div className="justify-content-between d-flex">
                       <span className="category-name text-dark">
@@ -249,7 +250,7 @@ function HomePage() {
                 <h1>no products</h1>
               )}
 
-              <div className="col-1">
+              <div className="col-1 d-none d-md-flex">
                 <button className="btn btn-danger">
                   <i className="fa-solid fa-chevron-right"></i>
                 </button>
@@ -266,14 +267,14 @@ function HomePage() {
               </div>
             </div>
             <div className="row align-items-center d-flex product-container">
-              <div className="col-1">
+              <div className="col-1 d-none d-md-flex">
                 <button className="btn btn-danger " onClick={() => {}}>
                   <i className="fa-solid fa-chevron-left"></i>
                 </button>
               </div>
               {filterProducts(products, "Women's Clothes") ? (
                 filterProducts(products, "Women's Clothes").map((product) => (
-                  <div className="col-3 position-relative product-card2">
+                  <div className=" col-6 col-md-3 position-relative product-card2">
                     <img src={product.image} alt="" className="img w-100" />
                     <div className="justify-content-between d-flex">
                       <span className="category-name text-dark">
@@ -320,7 +321,7 @@ function HomePage() {
                 <h1>no products</h1>
               )}
 
-              <div className="col-1">
+              <div className="col-1 d-none d-md-flex">
                 <button className="btn btn-danger">
                   <i className="fa-solid fa-chevron-right"></i>
                 </button>
@@ -337,14 +338,14 @@ function HomePage() {
               </div>
             </div>
             <div className="row align-items-center d-flex product-container">
-              <div className="col-1">
+              <div className="col-1 d-none d-md-flex">
                 <button className="btn btn-danger " onClick={() => {}}>
                   <i className="fa-solid fa-chevron-left"></i>
                 </button>
               </div>
               {filterProducts(products, "Kids") ? (
                 filterProducts(products, "Kids").map((product) => (
-                  <div className="col-3 position-relative product-card2">
+                  <div className="col-6 col-md-3 position-relative product-card2">
                     <img src={product.image} alt="" className="img w-100" />
                     <div className="justify-content-between d-flex">
                       <span className="category-name text-dark">
@@ -391,7 +392,7 @@ function HomePage() {
                 <h1>no products</h1>
               )}
 
-              <div className="col-1">
+              <div className="col-1 d-none d-md-flex">
                 <button className="btn btn-danger">
                   <i className="fa-solid fa-chevron-right"></i>
                 </button>
