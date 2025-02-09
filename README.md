@@ -1,331 +1,119 @@
-# Frontend Product Management Application
+# ClickCart
 
-## Project Overview
+ClickCart is an e-commerce platform that allows users to browse products, add them to the cart, and proceed to checkout. It also includes an admin dashboard for managing products and viewing analytics.
 
-This is a ReactJS web application that allows users to view, add, update, and delete products. The app features a product listing, admin authentication, product management functionality, and basic cart integration. The goal of the project was to demonstrate proficiency in ReactJS, TypeScript, and API integration.
+## Table of Contents
 
-The application includes an Admin Dashboard where products can be managed, and it uses mock APIs for fetching and updating product data.
+- [Installation](#installation)
+- [Usage](#usage)
+- [Components](#components)
+- [Routes](#routes)
+- [Contributing](#contributing)
+- [License](#license)
 
-### Key Features:
+## Installation
 
-- **Landing Page:**
+1. Clone the repository:
 
-  - Navigation bar with company logo and interactive cart icon.
-  - Product listing with sorting/filtering options.
-  - Promotional banner with featured products and current offers.
-  - Testimonials section displaying customer reviews.
-  - Footer with company information, contact details, and social media links.
+```sh
+git clone https://github.com/johnson-Omwoyo/The_BandInterview
+```
 
-- **Product Card Functionality:**
+2. Navigate to the project directory:
 
-  - Add products to the cart with a visual cart count indicator.
-  - Remove items from the cart and update the count dynamically.
+```sh
+cd clickCart
+```
 
-- **Admin Authentication:**
+3. Install dependencies:
 
-  - Secure login page with form validation and error handling.
-  - Admin authentication via React Context for session management.
+```sh
+npm install
+```
 
-- **Admin Dashboard:**
-  - Analytics section with sales graphs, product comparisons, and inventory status.
-  - CRUD operations for managing products (create, read, update, delete).
+## Usage
 
-## Technologies Used
+1. Start the development server:
 
-- **ReactJS** (with TypeScript)
-- **React Context** / Zustand for global state management
-- **Styled-components** for component styling
-- **RESTful API** integration (Faker API / JSON Placeholder for mock data)
-- **React Router** for navigation
-- **Git** for version control
+```sh
+npm run dev
+```
 
-## Setup Instructions
+2. Open your browser and navigate to `http://localhost:3000`.
 
-### Prerequisites
+## Components
 
-Before running the project, make sure you have the following tools installed:
+### ProductManagementSection
 
-- Node.js (version 14 or higher)
-- npm or Yarn (Package Manager)
+Manages the creation, editing, and deletion of products.
 
-### Installation
+### HomePage
 
-1. Clone the repository to your local machine.
-2. Install the necessary dependencies.
+Displays the list of products and offers.
 
----
+### AdminLogin
 
-## Running the Application
+Handles admin authentication.
 
-### Development Mode
+### AdminDashboard
 
-To run the application in development mode, use the appropriate command to start the app.
+Displays the admin dashboard with product management and analytics sections.
 
-This will start the app and it will be available at the default localhost URL.
+### AnalyticsSection
 
----
+Shows sales performance and product comparison charts.
 
-## Project Structure
+### Testimonials
 
-Here is an overview of the project directory structure:
+Displays customer testimonials.
 
-- /assets: Static files like images, fonts, etc.
-- /components: Reusable UI components (Button, ProductCard, etc.)
-- /context: Global state management using React Context
-- /pages: Main pages like Home, Admin Dashboard, Product Details
-- /services: API interaction logic (fetching products)
-- /styles: Global styles or styled-components
-- /utils: Helper functions, form validation logic, etc.
-- App.tsx: Root application component
-- index.tsx: Entry point of the application
+### App
 
----
+Main application component that includes the Navbar, Footer, and routes.
 
-## Features Explained
+### Footer
 
-### 1. Landing Page
+Displays company information, contact details, and social media links.
 
-- **Navigation Bar:** Includes the company logo, navigation links, and a cart icon that displays the number of items added to the cart.
-- **Product Listing Section:** Displays products in a grid/list view with filtering and sorting options.
-- **Promotional Banner:** Highlights featured products and current offers.
-- **Testimonials Section:** Showcases customer reviews with a rating system.
-- **Footer:** Displays company contact info, social media links, and more.
+### Navbar
 
-### 2. Product Card Functionality
+Navigation bar with links to home, admin login, and cart.
 
-- Clicking a product card navigates to the product's detailed view, where the user can see the product image, description, and price.
-- Users can add items to their cart, and the cart count is updated with animation.
-- There’s an option to remove items from the cart with visual feedback.
+### CartContext
 
-### 3. Admin Authentication
+Provides context for managing the shopping cart.
 
-- Secure login page where administrators can enter their credentials (email/username and password).
-- Form validation and error handling in case of invalid credentials.
+### ErrorPage
 
-### 4. Admin Dashboard
+Displays a 404 error message for unknown routes.
 
-- **Analytics Section:** Displays sales data, product comparisons, and inventory status using simple charts/graphs.
-- **Product Management:** CRUD functionality that allows admins to:
-  - Create new products.
-  - View product details.
-  - Edit and update product information.
-  - Delete products with confirmation prompts.
+### OrderConfirmationPage
 
----
+Displays order confirmation details.
 
-## API Integration
+### CheckoutPage
 
-The app uses a mock REST API to simulate fetching and managing product data. The API is implemented using Faker API or JSON Placeholder, providing realistic fake data for products.
+Handles the checkout process.
 
-- **Endpoints:**
-  - Fetch product list
-  - Add new product
-  - Update product
-  - Delete product
+### CartsPage
 
----
+Displays the items in the shopping cart.
 
-## Error Handling
+### ProductDetails
 
-- **Error Boundaries:** React error boundaries have been implemented to catch any UI-related errors and display an error message.
-- **Loading States:** Visual loading indicators are shown when data is being fetched from the API.
-- **Form Validation:** Ensures that required fields are filled out before submitting forms (e.g., login, product creation).
+Displays detailed information about a selected product.
 
----
+### ProductsPage
 
-## Version Control
+Displays a list of products.
 
-- Regular commits were made throughout the project to ensure a clear version history.
-- GitHub repository link is provided with clear commit messages.
+## Routes
 
----
-
-## Deployment
-
-- The project has been deployed using Vercel or Netlify, and you can view the live application link.
-
----
-
-## Conclusion
-
-This project demonstrates proficiency in ReactJS and TypeScript, showcasing the ability to build dynamic and interactive web applications with a focus on component-based architecture, state management, and API integration.
-
-Feel free to explore the project, try out the features, and check out the code on GitHub.
-
----
-
-## License
-
-MIT License. See the LICENSE file for more details.
-
----
-
-## Contact Information
-
-For further questions or technical issues, feel free to contact:
-
-- Your Name  
-  your-email@example.com
-
-# Frontend Product Management Application
-
-## Project Overview
-
-This is a ReactJS web application that allows users to view, add, update, and delete products. The app features a product listing, admin authentication, product management functionality, and basic cart integration. The goal of the project was to demonstrate proficiency in ReactJS, TypeScript, and API integration.
-
-The application includes an Admin Dashboard where products can be managed, and it uses mock APIs for fetching and updating product data.
-
-### Key Features:
-
-- **Landing Page:**
-
-  - Navigation bar with company logo and interactive cart icon.
-  - Product listing with sorting/filtering options.
-  - Promotional banner with featured products and current offers.
-  - Testimonials section displaying customer reviews.
-  - Footer with company information, contact details, and social media links.
-
-- **Product Card Functionality:**
-
-  - Add products to the cart with a visual cart count indicator.
-  - Remove items from the cart and update the count dynamically.
-
-- **Admin Authentication:**
-
-  - Secure login page with form validation and error handling.
-  - Admin authentication via React Context for session management.
-
-- **Admin Dashboard:**
-  - Analytics section with sales graphs, product comparisons, and inventory status.
-  - CRUD operations for managing products (create, read, update, delete).
-
-## Technologies Used
-
-- **ReactJS** (with TypeScript)
-- **React Context** / Zustand for global state management
-- **Styled-components** for component styling
-- **RESTful API** integration (Faker API / JSON Placeholder for mock data)
-- **React Router** for navigation
-- **Git** for version control
-
-## Setup Instructions
-
-### Prerequisites
-
-Before running the project, make sure you have the following tools installed:
-
-- Node.js (version 14 or higher)
-- npm or Yarn (Package Manager)
-
-### Installation
-
-1. Clone the repository to your local machine.
-2. Install the necessary dependencies.
-
----
-
-## Running the Application
-
-### Development Mode
-
-To run the application in development mode, use the appropriate command to start the app.
-
-This will start the app and it will be available at the default localhost URL.
-
----
-
-## Project Structure
-
-Here is an overview of the project directory structure:
-
-- /assets: Static files like images, fonts, etc.
-- /components: Reusable UI components (Button, ProductCard, etc.)
-- /context: Global state management using React Context
-- /pages: Main pages like Home, Admin Dashboard, Product Details
-- /services: API interaction logic (fetching products)
-- /styles: Global styles or styled-components
-- /utils: Helper functions, form validation logic, etc.
-- App.tsx: Root application component
-- index.tsx: Entry point of the application
-
----
-
-## Features Explained
-
-### 1. Landing Page
-
-- **Navigation Bar:** Includes the company logo, navigation links, and a cart icon that displays the number of items added to the cart.
-- **Product Listing Section:** Displays products in a grid/list view with filtering and sorting options.
-- **Promotional Banner:** Highlights featured products and current offers.
-- **Testimonials Section:** Showcases customer reviews with a rating system.
-- **Footer:** Displays company contact info, social media links, and more.
-
-### 2. Product Card Functionality
-
-- Clicking a product card navigates to the product's detailed view, where the user can see the product image, description, and price.
-- Users can add items to their cart, and the cart count is updated with animation.
-- There’s an option to remove items from the cart with visual feedback.
-
-### 3. Admin Authentication
-
-- Secure login page where administrators can enter their credentials (email/username and password).
-- Form validation and error handling in case of invalid credentials.
-
-### 4. Admin Dashboard
-
-- **Analytics Section:** Displays sales data, product comparisons, and inventory status using simple charts/graphs.
-- **Product Management:** CRUD functionality that allows admins to:
-  - Create new products.
-  - View product details.
-  - Edit and update product information.
-  - Delete products with confirmation prompts.
-
----
-
-## API Integration
-
-The app uses a mock REST API to simulate fetching and managing product data. The API is implemented using Faker API or JSON Placeholder, providing realistic fake data for products.
-
-- **Endpoints:**
-  - Fetch product list
-  - Add new product
-  - Update product
-  - Delete product
-
----
-
-## Error Handling
-
-- **Error Boundaries:** React error boundaries have been implemented to catch any UI-related errors and display an error message.
-- **Loading States:** Visual loading indicators are shown when data is being fetched from the API.
-- **Form Validation:** Ensures that required fields are filled out before submitting forms (e.g., login, product creation).
-
----
-
-## Version Control
-
-- Regular commits were made throughout the project to ensure a clear version history.
-- GitHub repository link is provided with clear commit messages.
-
----
-
-## Deployment
-
-- The project has been deployed using Vercel[Click here](https://the-band-interview-git-main-johnson-omwoyos-projects.vercel.app/).
-
----
-
-## Conclusion
-
-This project demonstrates proficiency in ReactJS and TypeScript, showcasing the ability to build dynamic and interactive web applications with a focus on component-based architecture, state management, and API integration.
-
-Feel free to explore the project, try out the features, and check out the code on GitHub.
-
----
-
-## Contact Information
-
-For further questions or technical issues, feel free to contact:
-
-- Omwoyo Johnson  
-  johnsonomwoyo@gmail.com
+- `/` - HomePage
+- `/login` - AdminLogin
+- `/cart` - CartsPage
+- `/checkout` - CheckoutPage
+- `/details` - ProductDetails
+- `/products` - ProductsPage
+- `/dashboard` - AdminDashboard
+- `/order-confirmation` - OrderConfirmationPage
